@@ -6,12 +6,14 @@ const express = require('express');
 // import cors from 'cors';
 const mongoose = require('mongoose');
 const cors = require('cors');
+const postRoutes = require('./routes/posts.js') ;
 
  const app = express();
-
+ 
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors());
+app.use('/posts',postRoutes);
 const CONNECTION_URL = 'mongodb+srv://HumanCache:HumanCache123@cluster0.m6pb0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const PORT = process.env.PORT|| 5000;
 
