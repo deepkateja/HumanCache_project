@@ -1,12 +1,13 @@
-// import express from 'express';
-const bodyParser = require('body-parser');
-const express = require('express');
-// import bodyParser from 'body-parser';
-// import mongoose from 'mongoose';
-// import cors from 'cors';
-const mongoose = require('mongoose');
-const cors = require('cors');
-const postRoutes = require('./routes/posts.js') ;
+import express from 'express';
+// const bodyParser = require('body-parser');
+// const express = require('express');
+ import bodyParser from 'body-parser';
+ import mongoose from 'mongoose';
+ import cors from 'cors';
+// const mongoose = require('mongoose');
+// const cors = require('cors');
+//const postRoutes = require('./routes/posts.js') ;
+import postRoutes from './routes/posts.js';
 
  const app = express();
  

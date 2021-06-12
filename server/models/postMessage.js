@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-
+// const mongoose = require('mongoose');
+import mongoose from 'mongoose'
 const postSchema = mongoose.Schema({
     title: String,
     message: String,
@@ -18,4 +18,4 @@ const postSchema = mongoose.Schema({
 
 var PostMessage = mongoose.model('PostMessage', postSchema);
 
-module.exports = PostMessage; 
+export default PostMessage; 

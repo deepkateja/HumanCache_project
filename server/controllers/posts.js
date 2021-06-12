@@ -1,6 +1,7 @@
-const PostMessage = require('../models/postMessage.js');
+// const PostMessage = require('../models/postMessage.js');
+import PostMessage from '../models/postMessage.js';
 
-getPosts = async (req, res) => { 
+export const getPosts = async (req, res) => { 
     try {
         const postMessages = await PostMessage.find();
                 
@@ -10,9 +11,11 @@ getPosts = async (req, res) => {
     }
 }
 
-createPost = async (req,res) =>{
+export const createPost = async (req,res) =>{
     const post = req.body;
+   
     const newPost = new PostMessage(post);
+   
     try{
         await newPost.save();
         res.status(201).json(newPost);
@@ -21,4 +24,5 @@ createPost = async (req,res) =>{
     }
 }
 
-module.exports = getPosts,createPost;
+
+
